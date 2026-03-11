@@ -43,7 +43,7 @@ jobs:
             password: ${{secrets.SERVER_PASSWORD }}
             script: |
               docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{secrets.DOCKER_TOKEN }}
-              cd /home/ubuntu/task
+              cd /home/jaikiran/task
               docker compose pull
               docker compose up -d
               
