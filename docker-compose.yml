@@ -1,0 +1,7 @@
+services:
+  pythonflask:
+    build: .
+    image: jaikiran15/pythonflask:Task2
+    container_name: pythonflaskapi
+    ports: 
+      - "19000:8000"
