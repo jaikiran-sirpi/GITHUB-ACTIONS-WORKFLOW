@@ -24,17 +24,7 @@ jobs:
          run: docker compose build
        - name: Push an Docker image
          run: docker compose push 
-       # - name: run the container
-       #   run: docker compose up -d
-       # - name: Build and Push Docker Image
-       #  uses: docker/build-push-action@v5
-       #  with:
-       #     context: .
-       #    push: true
-       #    tags: |
-       #      ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
-       #      ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}
-         
+    
        - name: ssh into vm
          uses: appleboy/ssh-action@v1.0.3
          with:
